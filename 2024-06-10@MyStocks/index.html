@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="台股,零股,量化交易">
+    
+    <meta name="author" content="The Redefine Team">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://for4boy.github.io/2024-06-10@mystocks/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="2024-06-10庫存明細">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2024-06-10庫存明細">
+<meta property="og:url" content="https://for4boy.github.io/2024-06-10@MyStocks/">
+<meta property="og:site_name" content="Python 台股量化交易">
+<meta property="og:description" content="2024-06-10庫存明細">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://for4boy.github.io/6278@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2393@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/3356@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/6215@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2427@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2486@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/912000@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2504@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/4915@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/1612@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/5534@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/1447@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2611@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2609@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2514@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2511@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2101@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2542@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/3056@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/1618@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2520@2024-06-10.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2537@2024-06-10.jpg">
+<meta property="article:published_time" content="2024-06-09T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-06-09T23:12:04.279Z">
+<meta property="article:author" content="Mingle Hsiao">
+<meta property="article:tag" content="台股">
+<meta property="article:tag" content="零股">
+<meta property="article:tag" content="量化交易">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://for4boy.github.io/6278@2024-06-10.jpg">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            2024-06-10庫存明細 -
+        
+        Theme Redefine
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+        <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    
+<script src="/js/libs/anime.min.js"></script>
+
+    <h1 class="ml13">
+        Theme Redefine
+    </h1>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+
+        anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [100,0],
+                translateZ: 0,
+                opacity: [0,1],
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i
+            }).add({
+            targets: '.ml13 .letter',
+            translateY: [0,-100],
+            opacity: [1,0],
+            easing: "easeInExpo",
+            duration: 1200,
+            delay: (el, i) => 100 + 30 * i
+        });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            hidePreloaderAfterTimeout(1000); // Hide after 1000 milliseconds once the window has loaded
+        });
+
+        // Backup failsafe: Hide preloader after a maximum of 5000 milliseconds, regardless of the window load event
+        hidePreloaderAfterTimeout(5000);
+
+        function hidePreloaderAfterTimeout(delay) {
+            setTimeout(function () {
+                var preloader = document.querySelector('.preloader');
+                preloader.style.opacity = '0';
+                setTimeout(function () {
+                    preloader.style.display = 'none';
+                }, 200);
+            }, delay);
+        }
+    </script>
+</div>
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"for4boy.github.io","root":"/","language":"zh-TW"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"5rem","h2":"4rem","h3":"2.8rem","h4":"2.5rem","h5":"2.2rem","h6":"2rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Theme Redefine","subtitle":{"text":[],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分鐘前","hour":"%s 小時前","day":"%s 天前","week":"%s 周前","month":"%s 個月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Theme Redefine
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首頁
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/tags"
+                                        >
+                                    <i class="fa-regular fa-tags fa-fw"></i>
+                                    標籤
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories"
+                                        >
+                                    <i class="fa-regular fa-folder fa-fw"></i>
+                                    分類
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首頁
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/tags"
+                        >
+                            <span>
+                                標籤
+                            </span>
+                            
+                                <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories"
+                        >
+                            <span>
+                                分類
+                            </span>
+                            
+                                <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
+        <div class="label text-third-text-color text-sm">標籤</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">4</div>
+        <div class="label text-third-text-color text-sm">分類</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">14</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">2024-06-10庫存明細</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/redefine-avatar.svg">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">The Redefine Team</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv2</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-06-10</span>
+        <span class="mobile">2024-06-10</span>
+        <span class="hover-info">撰寫</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-06-10 07:12:04</span>
+            <span class="mobile">2024-06-10 07:12:04</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E5%BA%AB%E5%AD%98/">庫存</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%8F%B0%E8%82%A1/">台股</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E9%9B%B6%E8%82%A1/">零股</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93/">量化交易</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h1 id="2024-06-10庫存明細"><a href="#2024-06-10庫存明細" class="headerlink" title="2024-06-10庫存明細"></a>2024-06-10庫存明細</h1><table>
+<thead>
+<tr>
+<th align="left">進場日</th>
+<th align="right">日數</th>
+<th align="right">Code</th>
+<th align="left">Name</th>
+<th align="left">成本試算</th>
+<th align="right">損益</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">2024-05-31</td>
+<td align="right">6</td>
+<td align="right">6278</td>
+<td align="left">台表科</td>
+<td align="left">118.17*24&#x3D;2836</td>
+<td align="right">-99</td>
+</tr>
+<tr>
+<td align="left">2024-06-06</td>
+<td align="right">2</td>
+<td align="right">2393</td>
+<td align="left">億光</td>
+<td align="left">73.46*13&#x3D;954</td>
+<td align="right">-20</td>
+</tr>
+<tr>
+<td align="left">2024-06-04</td>
+<td align="right">4</td>
+<td align="right">3356</td>
+<td align="left">奇偶</td>
+<td align="left">73.54*13&#x3D;956</td>
+<td align="right">-10</td>
+</tr>
+<tr>
+<td align="left">2024-06-04</td>
+<td align="right">4</td>
+<td align="right">6215</td>
+<td align="left">和椿</td>
+<td align="left">60.63*16&#x3D;970</td>
+<td align="right">-9</td>
+</tr>
+<tr>
+<td align="left">2024-06-06</td>
+<td align="right">2</td>
+<td align="right">2427</td>
+<td align="left">三商電</td>
+<td align="left">30.91*32&#x3D;989</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td align="left">2024-06-04</td>
+<td align="right">4</td>
+<td align="right">2486</td>
+<td align="left">一詮</td>
+<td align="left">107.11*9&#x3D;963</td>
+<td align="right">9</td>
+</tr>
+<tr>
+<td align="left">2024-05-30</td>
+<td align="right">7</td>
+<td align="right">912000</td>
+<td align="left">晨訊科-DR</td>
+<td align="left">3.39*578&#x3D;1959</td>
+<td align="right">16</td>
+</tr>
+<tr>
+<td align="left">2024-05-29</td>
+<td align="right">8</td>
+<td align="right">2504</td>
+<td align="left">國產</td>
+<td align="left">47.11*63&#x3D;2967</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td align="left">2024-06-04</td>
+<td align="right">4</td>
+<td align="right">4915</td>
+<td align="left">致伸</td>
+<td align="left">105.11*9&#x3D;945</td>
+<td align="right">18</td>
+</tr>
+<tr>
+<td align="left">2024-05-29</td>
+<td align="right">8</td>
+<td align="right">1612</td>
+<td align="left">宏泰</td>
+<td align="left">38.64*76&#x3D;2936</td>
+<td align="right">30</td>
+</tr>
+<tr>
+<td align="left">2024-06-03</td>
+<td align="right">5</td>
+<td align="right">5534</td>
+<td align="left">長虹</td>
+<td align="left">123.17*24&#x3D;2956</td>
+<td align="right">31</td>
+</tr>
+<tr>
+<td align="left">2024-06-03</td>
+<td align="right">5</td>
+<td align="right">1447</td>
+<td align="left">力鵬</td>
+<td align="left">9.78*101&#x3D;987</td>
+<td align="right">38</td>
+</tr>
+<tr>
+<td align="left">2024-05-29</td>
+<td align="right">8</td>
+<td align="right">2611</td>
+<td align="left">志信</td>
+<td align="left">32.67*60&#x3D;1960</td>
+<td align="right">54</td>
+</tr>
+<tr>
+<td align="left">2024-05-29</td>
+<td align="right">8</td>
+<td align="right">2609</td>
+<td align="left">陽明</td>
+<td align="left">76.62*13&#x3D;996</td>
+<td align="right">77</td>
+</tr>
+<tr>
+<td align="left">2024-05-30</td>
+<td align="right">7</td>
+<td align="right">2514</td>
+<td align="left">龍邦</td>
+<td align="left">23.45*80&#x3D;1876</td>
+<td align="right">94</td>
+</tr>
+<tr>
+<td align="left">2024-06-04</td>
+<td align="right">4</td>
+<td align="right">2511</td>
+<td align="left">太子</td>
+<td align="left">12.16*246&#x3D;2991</td>
+<td align="right">180</td>
+</tr>
+<tr>
+<td align="left">2024-05-29</td>
+<td align="right">8</td>
+<td align="right">2101</td>
+<td align="left">南港</td>
+<td align="left">57.37*102&#x3D;5851</td>
+<td align="right">190</td>
+</tr>
+<tr>
+<td align="left">2024-05-30</td>
+<td align="right">7</td>
+<td align="right">2542</td>
+<td align="left">興富發</td>
+<td align="left">44.95*65&#x3D;2921</td>
+<td align="right">214</td>
+</tr>
+<tr>
+<td align="left">2024-06-03</td>
+<td align="right">5</td>
+<td align="right">3056</td>
+<td align="left">富華新</td>
+<td align="left">34.14*174&#x3D;5940</td>
+<td align="right">235</td>
+</tr>
+<tr>
+<td align="left">2024-05-29</td>
+<td align="right">8</td>
+<td align="right">1618</td>
+<td align="left">合機</td>
+<td align="left">49.94*115&#x3D;5743</td>
+<td align="right">441</td>
+</tr>
+<tr>
+<td align="left">2024-05-29</td>
+<td align="right">8</td>
+<td align="right">2520</td>
+<td align="left">冠德</td>
+<td align="left">55.22*102&#x3D;5632</td>
+<td align="right">564</td>
+</tr>
+<tr>
+<td align="left">2024-05-30</td>
+<td align="right">7</td>
+<td align="right">2537</td>
+<td align="left">聯上發</td>
+<td align="left">18.27*163&#x3D;2978</td>
+<td align="right">901</td>
+</tr>
+</tbody></table>
+<p>庫存明細</p>
+<hr>
+<h3 id="2024-05-31-6交易日前-6278-台表科-光電業"><a href="#2024-05-31-6交易日前-6278-台表科-光電業" class="headerlink" title="2024-05-31(6交易日前) [6278 台表科&#x2F;光電業]"></a>2024-05-31(6交易日前) [6278 台表科&#x2F;光電業]</h3><p>成本&#x3D;118.17 數量&#x3D;24 損益&#x3D;-99 DC_h&#x3D;121.0 DC_l&#x3D;111.5 At_DC&#x3D;1.9<br>現價&#x3D;114.5 損益比&#x3D;-3.49% 賣單&#x3D;0<br>漲停&#x3D;124.5 跌停&#x3D;102.5 參考價 VWAP&#x3D;113.5 ATR&#x3D;3.23<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/6278@2024-06-10.jpg"
+                      alt="6278 台表科分析圖"
+                ></p>
+<hr>
+<h3 id="2024-06-06-2交易日前-2393-億光-光電業"><a href="#2024-06-06-2交易日前-2393-億光-光電業" class="headerlink" title="2024-06-06(2交易日前) [2393 億光&#x2F;光電業]"></a>2024-06-06(2交易日前) [2393 億光&#x2F;光電業]</h3><p>成本&#x3D;73.46 數量&#x3D;13 損益&#x3D;-20 DC_h&#x3D;74.2 DC_l&#x3D;67.5 At_DC&#x3D;4.2<br>現價&#x3D;72.2 損益比&#x3D;-2.09% 賣單&#x3D;0<br>漲停&#x3D;79.2 跌停&#x3D;64.8 參考價 VWAP&#x3D;72.0 ATR&#x3D;1.93<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2393@2024-06-10.jpg"
+                      alt="2393 億光分析圖"
+                ></p>
+<hr>
+<h3 id="2024-06-04-4交易日前-3356-奇偶-光電業"><a href="#2024-06-04-4交易日前-3356-奇偶-光電業" class="headerlink" title="2024-06-04(4交易日前) [3356 奇偶&#x2F;光電業]"></a>2024-06-04(4交易日前) [3356 奇偶&#x2F;光電業]</h3><p>成本&#x3D;73.54 數量&#x3D;13 損益&#x3D;-10 DC_h&#x3D;81.0 DC_l&#x3D;62.0 At_DC&#x3D;3.5<br>現價&#x3D;73.0 損益比&#x3D;-1.05% 賣單&#x3D;0<br>漲停&#x3D;79.7 跌停&#x3D;65.3 參考價 VWAP&#x3D;72.5 ATR&#x3D;3.59<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/3356@2024-06-10.jpg"
+                      alt="3356 奇偶分析圖"
+                ></p>
+<hr>
+<h3 id="2024-06-04-4交易日前-6215-和椿-其他電子業"><a href="#2024-06-04-4交易日前-6215-和椿-其他電子業" class="headerlink" title="2024-06-04(4交易日前) [6215 和椿&#x2F;其他電子業]"></a>2024-06-04(4交易日前) [6215 和椿&#x2F;其他電子業]</h3><p>成本&#x3D;60.63 數量&#x3D;16 損益&#x3D;-9 DC_h&#x3D;63.0 DC_l&#x3D;45.1 At_DC&#x3D;5.1<br>現價&#x3D;60.3 損益比&#x3D;-0.93% 賣單&#x3D;0<br>漲停&#x3D;65.3 跌停&#x3D;53.5 參考價 VWAP&#x3D;59.4 ATR&#x3D;3.56<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/6215@2024-06-10.jpg"
+                      alt="6215 和椿分析圖"
+                ></p>
+<hr>
+<h3 id="2024-06-06-2交易日前-2427-三商電-資訊服務業"><a href="#2024-06-06-2交易日前-2427-三商電-資訊服務業" class="headerlink" title="2024-06-06(2交易日前) [2427 三商電&#x2F;資訊服務業]"></a>2024-06-06(2交易日前) [2427 三商電&#x2F;資訊服務業]</h3><p>成本&#x3D;30.91 數量&#x3D;32 損益&#x3D;0 DC_h&#x3D;32.0 DC_l&#x3D;26.55 At_DC&#x3D;4.9<br>現價&#x3D;31.0 損益比&#x3D;0.0% 賣單&#x3D;0<br>漲停&#x3D;33.85 跌停&#x3D;27.75 參考價 VWAP&#x3D;30.8 ATR&#x3D;1.06<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2427@2024-06-10.jpg"
+                      alt="2427 三商電分析圖"
+                ></p>
+<hr>
+<h3 id="2024-06-04-4交易日前-2486-一詮-光電業"><a href="#2024-06-04-4交易日前-2486-一詮-光電業" class="headerlink" title="2024-06-04(4交易日前) [2486 一詮&#x2F;光電業]"></a>2024-06-04(4交易日前) [2486 一詮&#x2F;光電業]</h3><p>成本&#x3D;107.11 數量&#x3D;9 損益&#x3D;9 DC_h&#x3D;112.5 DC_l&#x3D;77.8 At_DC&#x3D;5.3<br>現價&#x3D;108.5 損益比&#x3D;0.93% 賣單&#x3D;0<br>漲停&#x3D;113.5 跌停&#x3D;93.2 參考價 VWAP&#x3D;103.5 ATR&#x3D;6.34<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2486@2024-06-10.jpg"
+                      alt="2486 一詮分析圖"
+                ></p>
+<hr>
+<h3 id="2024-05-30-7交易日前-912000-晨訊科-DR-未分類-00"><a href="#2024-05-30-7交易日前-912000-晨訊科-DR-未分類-00" class="headerlink" title="2024-05-30(7交易日前) [912000 晨訊科-DR&#x2F;未分類(00)]"></a>2024-05-30(7交易日前) [912000 晨訊科-DR&#x2F;未分類(00)]</h3><p>成本&#x3D;3.39 數量&#x3D;578 損益&#x3D;16 DC_h&#x3D;3.54 DC_l&#x3D;2.59 At_DC&#x3D;5.2<br>現價&#x3D;3.42 損益比&#x3D;0.82% 賣單&#x3D;0<br>漲停&#x3D;3.68 跌停&#x3D;3.02 參考價 VWAP&#x3D;3.35 ATR&#x3D;0.16<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/912000@2024-06-10.jpg"
+                      alt="912000 晨訊科-DR分析圖"
+                ></p>
+<hr>
+<h3 id="2024-05-29-8交易日前-2504-國產-建材營造業"><a href="#2024-05-29-8交易日前-2504-國產-建材營造業" class="headerlink" title="2024-05-29(8交易日前) [2504 國產&#x2F;建材營造業]"></a>2024-05-29(8交易日前) [2504 國產&#x2F;建材營造業]</h3><p>成本&#x3D;47.11 數量&#x3D;63 損益&#x3D;18 DC_h&#x3D;51.2 DC_l&#x3D;44.1 At_DC&#x3D;3.0<br>現價&#x3D;47.6 損益比&#x3D;0.61% 賣單&#x3D;0<br>漲停&#x3D;51.8 跌停&#x3D;42.45 參考價 VWAP&#x3D;47.15 ATR&#x3D;1.96<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2504@2024-06-10.jpg"
+                      alt="2504 國產分析圖"
+                ></p>
+<hr>
+<h3 id="2024-06-04-4交易日前-4915-致伸-電子零組件業"><a href="#2024-06-04-4交易日前-4915-致伸-電子零組件業" class="headerlink" title="2024-06-04(4交易日前) [4915 致伸&#x2F;電子零組件業]"></a>2024-06-04(4交易日前) [4915 致伸&#x2F;電子零組件業]</h3><p>成本&#x3D;105.11 數量&#x3D;9 損益&#x3D;18 DC_h&#x3D;112.0 DC_l&#x3D;92.4 At_DC&#x3D;4.6<br>現價&#x3D;107.5 損益比&#x3D;1.9% 賣單&#x3D;0<br>漲停&#x3D;118.5 跌停&#x3D;97.2 參考價 VWAP&#x3D;108.0 ATR&#x3D;3.54<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/4915@2024-06-10.jpg"
+                      alt="4915 致伸分析圖"
+                ></p>
+<hr>
+<h3 id="2024-05-29-8交易日前-1612-宏泰-電器電纜"><a href="#2024-05-29-8交易日前-1612-宏泰-電器電纜" class="headerlink" title="2024-05-29(8交易日前) [1612 宏泰&#x2F;電器電纜]"></a>2024-05-29(8交易日前) [1612 宏泰&#x2F;電器電纜]</h3><p>成本&#x3D;38.64 數量&#x3D;76 損益&#x3D;30 DC_h&#x3D;40.8 DC_l&#x3D;37.15 At_DC&#x3D;3.4<br>現價&#x3D;39.2 損益比&#x3D;1.02% 賣單&#x3D;0<br>漲停&#x3D;41.8 跌停&#x3D;34.2 參考價 VWAP&#x3D;38.0 ATR&#x3D;1.29<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/1612@2024-06-10.jpg"
+                      alt="1612 宏泰分析圖"
+                ></p>
+<hr>
+<h3 id="2024-06-03-5交易日前-5534-長虹-建材營造業"><a href="#2024-06-03-5交易日前-5534-長虹-建材營造業" class="headerlink" title="2024-06-03(5交易日前) [5534 長虹&#x2F;建材營造業]"></a>2024-06-03(5交易日前) [5534 長虹&#x2F;建材營造業]</h3><p>成本&#x3D;123.17 數量&#x3D;24 損益&#x3D;31 DC_h&#x3D;137.0 DC_l&#x3D;113.0 At_DC&#x3D;3.0<br>現價&#x3D;125.0 損益比&#x3D;1.05% 賣單&#x3D;0<br>漲停&#x3D;136.5 跌停&#x3D;112.5 參考價 VWAP&#x3D;124.5 ATR&#x3D;5.84<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/5534@2024-06-10.jpg"
+                      alt="5534 長虹分析圖"
+                ></p>
+<hr>
+<h3 id="2024-06-03-5交易日前-1447-力鵬-紡織纖維"><a href="#2024-06-03-5交易日前-1447-力鵬-紡織纖維" class="headerlink" title="2024-06-03(5交易日前) [1447 力鵬&#x2F;紡織纖維]"></a>2024-06-03(5交易日前) [1447 力鵬&#x2F;紡織纖維]</h3><p>成本&#x3D;9.78 數量&#x3D;101 損益&#x3D;38 DC_h&#x3D;10.4 DC_l&#x3D;8.45 At_DC&#x3D;5.4<br>現價&#x3D;10.2 損益比&#x3D;3.85% 賣單&#x3D;0<br>漲停&#x3D;10.5 跌停&#x3D;8.63 參考價 VWAP&#x3D;9.58 ATR&#x3D;0.31<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/1447@2024-06-10.jpg"
+                      alt="1447 力鵬分析圖"
+                ></p>
+<hr>
+<h3 id="2024-05-29-8交易日前-2611-志信-航運業"><a href="#2024-05-29-8交易日前-2611-志信-航運業" class="headerlink" title="2024-05-29(8交易日前) [2611 志信&#x2F;航運業]"></a>2024-05-29(8交易日前) [2611 志信&#x2F;航運業]</h3><p>成本&#x3D;32.67 數量&#x3D;60 損益&#x3D;54 DC_h&#x3D;35.85 DC_l&#x3D;28.2 At_DC&#x3D;4.3<br>現價&#x3D;33.7 損益比&#x3D;2.75% 賣單&#x3D;0<br>漲停&#x3D;36.75 跌停&#x3D;30.15 參考價 VWAP&#x3D;33.45 ATR&#x3D;1.41<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2611@2024-06-10.jpg"
+                      alt="2611 志信分析圖"
+                ></p>
+<hr>
+<h3 id="2024-05-29-8交易日前-2609-陽明-航運業"><a href="#2024-05-29-8交易日前-2609-陽明-航運業" class="headerlink" title="2024-05-29(8交易日前) [2609 陽明&#x2F;航運業]"></a>2024-05-29(8交易日前) [2609 陽明&#x2F;航運業]</h3><p>成本&#x3D;76.62 數量&#x3D;13 損益&#x3D;77 DC_h&#x3D;85.4 DC_l&#x3D;64.2 At_DC&#x3D;5.3<br>現價&#x3D;82.9 損益比&#x3D;7.73% 賣單&#x3D;0<br>漲停&#x3D;92.0 跌停&#x3D;75.4 參考價 VWAP&#x3D;83.7 ATR&#x3D;4.05<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2609@2024-06-10.jpg"
+                      alt="2609 陽明分析圖"
+                ></p>
+<hr>
+<h3 id="2024-05-30-7交易日前-2514-龍邦-其他業"><a href="#2024-05-30-7交易日前-2514-龍邦-其他業" class="headerlink" title="2024-05-30(7交易日前) [2514 龍邦&#x2F;其他業]"></a>2024-05-30(7交易日前) [2514 龍邦&#x2F;其他業]</h3><p>成本&#x3D;23.45 數量&#x3D;80 損益&#x3D;94 DC_h&#x3D;25.8 DC_l&#x3D;17.5 At_DC&#x3D;5.2<br>現價&#x3D;24.7 損益比&#x3D;5.01% 賣單&#x3D;0<br>漲停&#x3D;25.85 跌停&#x3D;21.15 參考價 VWAP&#x3D;23.5 ATR&#x3D;1.16<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2514@2024-06-10.jpg"
+                      alt="2514 龍邦分析圖"
+                ></p>
+<hr>
+<h3 id="2024-06-04-4交易日前-2511-太子-建材營造業"><a href="#2024-06-04-4交易日前-2511-太子-建材營造業" class="headerlink" title="2024-06-04(4交易日前) [2511 太子&#x2F;建材營造業]"></a>2024-06-04(4交易日前) [2511 太子&#x2F;建材營造業]</h3><p>成本&#x3D;12.16 數量&#x3D;246 損益&#x3D;180 DC_h&#x3D;13.2 DC_l&#x3D;11.45 At_DC&#x3D;5.1<br>現價&#x3D;12.95 損益比&#x3D;6.02% 賣單&#x3D;0<br>漲停&#x3D;13.25 跌停&#x3D;10.85 參考價 VWAP&#x3D;12.05 ATR&#x3D;0.44<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2511@2024-06-10.jpg"
+                      alt="2511 太子分析圖"
+                ></p>
+<hr>
+<h3 id="2024-05-29-8交易日前-2101-南港-橡膠工業"><a href="#2024-05-29-8交易日前-2101-南港-橡膠工業" class="headerlink" title="2024-05-29(8交易日前) [2101 南港&#x2F;橡膠工業]"></a>2024-05-29(8交易日前) [2101 南港&#x2F;橡膠工業]</h3><p>成本&#x3D;57.37 數量&#x3D;102 損益&#x3D;190 DC_h&#x3D;65.2 DC_l&#x3D;54.0 At_DC&#x3D;2.9<br>現價&#x3D;59.5 損益比&#x3D;3.25% 賣單&#x3D;0<br>漲停&#x3D;66.1 跌停&#x3D;54.1 參考價 VWAP&#x3D;60.1 ATR&#x3D;2.58<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2101@2024-06-10.jpg"
+                      alt="2101 南港分析圖"
+                ></p>
+<hr>
+<h3 id="2024-05-30-7交易日前-2542-興富發-建材營造業"><a href="#2024-05-30-7交易日前-2542-興富發-建材營造業" class="headerlink" title="2024-05-30(7交易日前) [2542 興富發&#x2F;建材營造業]"></a>2024-05-30(7交易日前) [2542 興富發&#x2F;建材營造業]</h3><p>成本&#x3D;44.95 數量&#x3D;65 損益&#x3D;214 DC_h&#x3D;49.35 DC_l&#x3D;43.75 At_DC&#x3D;5.0<br>現價&#x3D;48.45 損益比&#x3D;7.32% 賣單&#x3D;0<br>漲停&#x3D;52.0 跌停&#x3D;42.65 參考價 VWAP&#x3D;47.35 ATR&#x3D;1.19<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2542@2024-06-10.jpg"
+                      alt="2542 興富發分析圖"
+                ></p>
+<hr>
+<h3 id="2024-06-03-5交易日前-3056-富華新-建材營造業"><a href="#2024-06-03-5交易日前-3056-富華新-建材營造業" class="headerlink" title="2024-06-03(5交易日前) [3056 富華新&#x2F;建材營造業]"></a>2024-06-03(5交易日前) [3056 富華新&#x2F;建材營造業]</h3><p>成本&#x3D;34.14 數量&#x3D;174 損益&#x3D;235 DC_h&#x3D;36.1 DC_l&#x3D;32.35 At_DC&#x3D;5.3<br>現價&#x3D;35.65 損益比&#x3D;3.96% 賣單&#x3D;0<br>漲停&#x3D;37.8 跌停&#x3D;31.0 參考價 VWAP&#x3D;34.4 ATR&#x3D;0.98<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/3056@2024-06-10.jpg"
+                      alt="3056 富華新分析圖"
+                ></p>
+<hr>
+<h3 id="2024-05-29-8交易日前-1618-合機-電器電纜"><a href="#2024-05-29-8交易日前-1618-合機-電器電纜" class="headerlink" title="2024-05-29(8交易日前) [1618 合機&#x2F;電器電纜]"></a>2024-05-29(8交易日前) [1618 合機&#x2F;電器電纜]</h3><p>成本&#x3D;49.94 數量&#x3D;115 損益&#x3D;441 DC_h&#x3D;54.2 DC_l&#x3D;47.15 At_DC&#x3D;5.8<br>現價&#x3D;54.0 損益比&#x3D;7.68% 賣單&#x3D;0<br>加碼&#x3D;51.4*58&#x3D;2981.2 買價&#x3D;支撐價(48.8)+ATR(2.62) 數量&#x3D;3000&#x2F;買價 進場<br>漲停&#x3D;54.0 跌停&#x3D;44.2 參考價 VWAP&#x3D;49.1 ATR&#x3D;2.62<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/1618@2024-06-10.jpg"
+                      alt="1618 合機分析圖"
+                ></p>
+<hr>
+<h3 id="2024-05-29-8交易日前-2520-冠德-建材營造業"><a href="#2024-05-29-8交易日前-2520-冠德-建材營造業" class="headerlink" title="2024-05-29(8交易日前) [2520 冠德&#x2F;建材營造業]"></a>2024-05-29(8交易日前) [2520 冠德&#x2F;建材營造業]</h3><p>成本&#x3D;55.22 數量&#x3D;102 損益&#x3D;564 DC_h&#x3D;62.8 DC_l&#x3D;52.8 At_DC&#x3D;4.9<br>現價&#x3D;61.0 損益比&#x3D;10.01% 賣單&#x3D;0<br>漲停&#x3D;67.3 跌停&#x3D;55.1 參考價 VWAP&#x3D;61.2 ATR&#x3D;2.66<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2520@2024-06-10.jpg"
+                      alt="2520 冠德分析圖"
+                ></p>
+<hr>
+<h3 id="2024-05-30-7交易日前-2537-聯上發-建材營造業"><a href="#2024-05-30-7交易日前-2537-聯上發-建材營造業" class="headerlink" title="2024-05-30(7交易日前) [2537 聯上發&#x2F;建材營造業]"></a>2024-05-30(7交易日前) [2537 聯上發&#x2F;建材營造業]</h3><p>成本&#x3D;18.27 數量&#x3D;163 損益&#x3D;901 DC_h&#x3D;23.9 DC_l&#x3D;15.6 At_DC&#x3D;6.0<br>現價&#x3D;23.9 損益比&#x3D;30.26% 賣單&#x3D;0<br>漲停&#x3D;23.9 跌停&#x3D;19.6 參考價 VWAP&#x3D;21.75 ATR&#x3D;1.31<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2537@2024-06-10.jpg"
+                      alt="2537 聯上發分析圖"
+                ></p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>標題:</strong> 2024-06-10庫存明細</li>
+        <li><strong>作者:</strong> The Redefine Team</li>
+        <li><strong>撰寫于
+                :</strong> 2024-06-10 00:00:00</li>
+        
+            <li>
+                <strong>更新于
+                    :</strong> 2024-06-10 07:12:04
+            </li>
+        
+        <li>
+            <strong>連結:</strong> https://redefine.ohevan.com/2024-06-10@MyStocks/
+        </li>
+        <li>
+            <strong>
+                版權宣告:
+            </strong>
+            
+
+            
+                本作品采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a> 进行许可。
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E5%8F%B0%E8%82%A1/">#台股</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E9%9B%B6%E8%82%A1/">#零股</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93/">#量化交易</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024-06-10%5B2537%5D@Trend/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">2024-06-10 SR走勢圖</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024-06-10@Search/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">2024-06-10搜尋分析</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        留言
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          recaptchaV3Key: "wasd",
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此頁目錄</div>
+        <div class="page-title">2024-06-10庫存明細</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2024-06-10%E5%BA%AB%E5%AD%98%E6%98%8E%E7%B4%B0"><span class="nav-text">2024-06-10庫存明細</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-05-31-6%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-6278-%E5%8F%B0%E8%A1%A8%E7%A7%91-%E5%85%89%E9%9B%BB%E6%A5%AD"><span class="nav-text">2024-05-31(6交易日前) [6278 台表科&#x2F;光電業]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-06-06-2%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-2393-%E5%84%84%E5%85%89-%E5%85%89%E9%9B%BB%E6%A5%AD"><span class="nav-text">2024-06-06(2交易日前) [2393 億光&#x2F;光電業]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-06-04-4%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-3356-%E5%A5%87%E5%81%B6-%E5%85%89%E9%9B%BB%E6%A5%AD"><span class="nav-text">2024-06-04(4交易日前) [3356 奇偶&#x2F;光電業]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-06-04-4%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-6215-%E5%92%8C%E6%A4%BF-%E5%85%B6%E4%BB%96%E9%9B%BB%E5%AD%90%E6%A5%AD"><span class="nav-text">2024-06-04(4交易日前) [6215 和椿&#x2F;其他電子業]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-06-06-2%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-2427-%E4%B8%89%E5%95%86%E9%9B%BB-%E8%B3%87%E8%A8%8A%E6%9C%8D%E5%8B%99%E6%A5%AD"><span class="nav-text">2024-06-06(2交易日前) [2427 三商電&#x2F;資訊服務業]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-06-04-4%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-2486-%E4%B8%80%E8%A9%AE-%E5%85%89%E9%9B%BB%E6%A5%AD"><span class="nav-text">2024-06-04(4交易日前) [2486 一詮&#x2F;光電業]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-05-30-7%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-912000-%E6%99%A8%E8%A8%8A%E7%A7%91-DR-%E6%9C%AA%E5%88%86%E9%A1%9E-00"><span class="nav-text">2024-05-30(7交易日前) [912000 晨訊科-DR&#x2F;未分類(00)]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-05-29-8%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-2504-%E5%9C%8B%E7%94%A2-%E5%BB%BA%E6%9D%90%E7%87%9F%E9%80%A0%E6%A5%AD"><span class="nav-text">2024-05-29(8交易日前) [2504 國產&#x2F;建材營造業]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-06-04-4%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-4915-%E8%87%B4%E4%BC%B8-%E9%9B%BB%E5%AD%90%E9%9B%B6%E7%B5%84%E4%BB%B6%E6%A5%AD"><span class="nav-text">2024-06-04(4交易日前) [4915 致伸&#x2F;電子零組件業]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-05-29-8%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-1612-%E5%AE%8F%E6%B3%B0-%E9%9B%BB%E5%99%A8%E9%9B%BB%E7%BA%9C"><span class="nav-text">2024-05-29(8交易日前) [1612 宏泰&#x2F;電器電纜]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-06-03-5%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-5534-%E9%95%B7%E8%99%B9-%E5%BB%BA%E6%9D%90%E7%87%9F%E9%80%A0%E6%A5%AD"><span class="nav-text">2024-06-03(5交易日前) [5534 長虹&#x2F;建材營造業]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-06-03-5%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-1447-%E5%8A%9B%E9%B5%AC-%E7%B4%A1%E7%B9%94%E7%BA%96%E7%B6%AD"><span class="nav-text">2024-06-03(5交易日前) [1447 力鵬&#x2F;紡織纖維]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-05-29-8%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-2611-%E5%BF%97%E4%BF%A1-%E8%88%AA%E9%81%8B%E6%A5%AD"><span class="nav-text">2024-05-29(8交易日前) [2611 志信&#x2F;航運業]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-05-29-8%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-2609-%E9%99%BD%E6%98%8E-%E8%88%AA%E9%81%8B%E6%A5%AD"><span class="nav-text">2024-05-29(8交易日前) [2609 陽明&#x2F;航運業]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-05-30-7%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-2514-%E9%BE%8D%E9%82%A6-%E5%85%B6%E4%BB%96%E6%A5%AD"><span class="nav-text">2024-05-30(7交易日前) [2514 龍邦&#x2F;其他業]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-06-04-4%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-2511-%E5%A4%AA%E5%AD%90-%E5%BB%BA%E6%9D%90%E7%87%9F%E9%80%A0%E6%A5%AD"><span class="nav-text">2024-06-04(4交易日前) [2511 太子&#x2F;建材營造業]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-05-29-8%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-2101-%E5%8D%97%E6%B8%AF-%E6%A9%A1%E8%86%A0%E5%B7%A5%E6%A5%AD"><span class="nav-text">2024-05-29(8交易日前) [2101 南港&#x2F;橡膠工業]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-05-30-7%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-2542-%E8%88%88%E5%AF%8C%E7%99%BC-%E5%BB%BA%E6%9D%90%E7%87%9F%E9%80%A0%E6%A5%AD"><span class="nav-text">2024-05-30(7交易日前) [2542 興富發&#x2F;建材營造業]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-06-03-5%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-3056-%E5%AF%8C%E8%8F%AF%E6%96%B0-%E5%BB%BA%E6%9D%90%E7%87%9F%E9%80%A0%E6%A5%AD"><span class="nav-text">2024-06-03(5交易日前) [3056 富華新&#x2F;建材營造業]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-05-29-8%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-1618-%E5%90%88%E6%A9%9F-%E9%9B%BB%E5%99%A8%E9%9B%BB%E7%BA%9C"><span class="nav-text">2024-05-29(8交易日前) [1618 合機&#x2F;電器電纜]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-05-29-8%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-2520-%E5%86%A0%E5%BE%B7-%E5%BB%BA%E6%9D%90%E7%87%9F%E9%80%A0%E6%A5%AD"><span class="nav-text">2024-05-29(8交易日前) [2520 冠德&#x2F;建材營造業]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024-05-30-7%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-2537-%E8%81%AF%E4%B8%8A%E7%99%BC-%E5%BB%BA%E6%9D%90%E7%87%9F%E9%80%A0%E6%A5%AD"><span class="nav-text">2024-05-30(7交易日前) [2537 聯上發&#x2F;建材營造業]</span></a></li></ol></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">The Redefine Team</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共 14 篇文章
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">讀者</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">閱覽</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm"><?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 框架</span>
+            <span class="text-sm lg:block">主題&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.6.2</a></span>
+        </div>
+        
+        
+            <div>
+                博客已運行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小時 <span class="odometer" id="runtime_minutes"></span> 分鐘 <span class="odometer" id="runtime_seconds"></span> 秒
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜尋..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>
