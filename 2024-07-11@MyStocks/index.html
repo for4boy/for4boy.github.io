@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="台股,零股,量化交易">
+    
+    <meta name="author" content="易">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://for4boy.github.io/2024-07-11@mystocks/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="2024-07-11 庫存明細">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2024-07-11 庫存明細">
+<meta property="og:url" content="https://for4boy.github.io/2024-07-11@MyStocks/">
+<meta property="og:site_name" content="Python 台股量化交易">
+<meta property="og:description" content="2024-07-11 庫存明細">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://for4boy.github.io/3296@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2331@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2903@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2328@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/1101@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2520@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2633@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2354@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/00878@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/1402@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/00881@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/1608@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/0056@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2362@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/00923@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/006208@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/00830@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/00892@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2542@2024-07-11.jpg">
+<meta property="og:image" content="https://for4boy.github.io/2881@2024-07-11.jpg">
+<meta property="article:published_time" content="2024-07-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-07-11T08:29:17.468Z">
+<meta property="article:author" content="Mingle Hsiao">
+<meta property="article:tag" content="台股">
+<meta property="article:tag" content="零股">
+<meta property="article:tag" content="量化交易">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://for4boy.github.io/3296@2024-07-11.jpg">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/YI.ico" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/YI.ico">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/YI.ico">
+    <!--- Page Info-->
+    
+    <title>
+        
+            2024-07-11 庫存明細 -
+        
+        零股之易-Python量化交易系統
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/assets/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"for4boy.github.io","root":"/","language":"zh-TW"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"16px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"center","headings_top_spacing":{"h1":"5rem","h2":"4rem","h3":"2.8rem","h4":"2.5rem","h5":"2.2rem","h6":"2rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":false,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":false,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"建議閱讀","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"dark"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"enable":false,"site_pv":false,"site_uv":false,"post_pv":false},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"零股之易-Python量化交易系統","subtitle":{"text":["台股零股 量化交易 走勢數據回測 股海實戰日誌"],"hitokoto":{"enable":false},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":true},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.4","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"right","first_item":"menu","announcement":null,"show_on_mobile":true,"links":{"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/6/11 12:00:00"};
+    window.lang_ago = {"second":"%s 秒前","minute":"%s 分鐘前","hour":"%s 小時前","day":"%s 天前","week":"%s 周前","month":"%s 個月前","year":"%s 年前"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+<!--        <span class="swup-progress-icon">-->
+<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+<!--        </span>-->
+    
+</div>
+
+
+
+    <style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        零股之易-Python量化交易系統
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({loop: true})
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [40,0],
+                translateZ: 0,
+                opacity: [0,1],
+                filter: ['blur(5px)', 'blur(0px)'], // Starting from blurred to unblurred
+                easing: "easeOutExpo",
+                duration: 1400,
+                delay: (el, i) => 300 + 30 * i,
+            }).add({
+                targets: '.ml13 .letter',
+                translateY: [0,-40],
+                opacity: [1,0],
+                filter: ['blur(0px)', 'blur(5px)'], // Ending from unblurred to blurred
+                easing: "easeInExpo",
+                duration: 1200,
+                delay: (el, i) => 100 + 30 * i,
+                complete: function() {
+                    hidePreloader(); // Call hidePreloader after the animation completes
+                }
+            });
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container px-6 md:px-12">
+
+    <div class="navbar-content ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                零股之易-Python量化交易系統
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    首頁
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/tags"
+                                        >
+                                    <i class="fa-regular fa-tags fa-fw"></i>
+                                    標籤
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/categories"
+                                        >
+                                    <i class="fa-regular fa-folder fa-fw"></i>
+                                    分類
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                首頁
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/tags"
+                        >
+                            <span>
+                                標籤
+                            </span>
+                            
+                                <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/categories"
+                        >
+                            <span>
+                                分類
+                            </span>
+                            
+                                <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
+        <div class="label text-third-text-color text-sm">標籤</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">4</div>
+        <div class="label text-third-text-color text-sm">分類</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">57</div>
+        <div class="label text-third-text-color text-sm">文章</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                
+                
+                <img src="/3296@2024-07-11.jpg" alt="2024-07-11 庫存明細" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75"/>
+                
+                <div class="w-full flex items-center absolute bottom-0 justify-center">
+                    <h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">2024-07-11 庫存明細</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/Yi.png">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">易</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-07-11</span>
+        <span class="mobile">2024-07-11</span>
+        <span class="hover-info">撰寫</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-07-11 16:29:17</span>
+            <span class="mobile">2024-07-11 16:29:17</span>
+            <span class="hover-info">更新</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E5%BA%AB%E5%AD%98/">庫存</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%8F%B0%E8%82%A1/">台股</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E9%9B%B6%E8%82%A1/">零股</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93/">量化交易</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h1 id="2024-07-11-庫存明細"><a href="#2024-07-11-庫存明細" class="headerlink" title="2024-07-11 庫存明細"></a>2024-07-11 庫存明細</h1><table>
+<thead>
+<tr>
+<th align="left">進場日</th>
+<th align="right">日數</th>
+<th align="right">Code</th>
+<th align="left">Name</th>
+<th align="left">成本試算</th>
+<th align="right">損益</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">2024-07-08</td>
+<td align="right">3</td>
+<td align="right">3296</td>
+<td align="left">勝德</td>
+<td align="left">31.24*151&#x3D;4717</td>
+<td align="right">-440</td>
+</tr>
+<tr>
+<td align="left">2024-07-08</td>
+<td align="right">3</td>
+<td align="right">2331</td>
+<td align="left">精英</td>
+<td align="left">34.64*140&#x3D;4849</td>
+<td align="right">-207</td>
+</tr>
+<tr>
+<td align="left">2024-07-05</td>
+<td align="right">4</td>
+<td align="right">2903</td>
+<td align="left">遠百</td>
+<td align="left">35.49*84&#x3D;2981</td>
+<td align="right">-191</td>
+</tr>
+<tr>
+<td align="left">2024-07-08</td>
+<td align="right">3</td>
+<td align="right">2328</td>
+<td align="left">廣宇</td>
+<td align="left">40.8*121&#x3D;4936</td>
+<td align="right">-117</td>
+</tr>
+<tr>
+<td align="left">2024-07-09</td>
+<td align="right">2</td>
+<td align="right">1101</td>
+<td align="left">台泥</td>
+<td align="left">34.49*144&#x3D;4966</td>
+<td align="right">-84</td>
+</tr>
+<tr>
+<td align="left">2024-07-04</td>
+<td align="right">5</td>
+<td align="right">2520</td>
+<td align="left">冠德</td>
+<td align="left">58.17*86&#x3D;5002</td>
+<td align="right">-62</td>
+</tr>
+<tr>
+<td align="left">2024-07-09</td>
+<td align="right">2</td>
+<td align="right">2633</td>
+<td align="left">台灣高鐵</td>
+<td align="left">30.64*162&#x3D;4963</td>
+<td align="right">-36</td>
+</tr>
+<tr>
+<td align="left">2024-07-08</td>
+<td align="right">3</td>
+<td align="right">2354</td>
+<td align="left">鴻準</td>
+<td align="left">72.5*68&#x3D;4930</td>
+<td align="right">13</td>
+</tr>
+<tr>
+<td align="left">2024-07-08</td>
+<td align="right">3</td>
+<td align="right">00878</td>
+<td align="left">國泰永續高股息</td>
+<td align="left">24.2*205&#x3D;4961</td>
+<td align="right">65</td>
+</tr>
+<tr>
+<td align="left">2024-07-04</td>
+<td align="right">5</td>
+<td align="right">1402</td>
+<td align="left">遠東新</td>
+<td align="left">36.99*81&#x3D;2996</td>
+<td align="right">69</td>
+</tr>
+<tr>
+<td align="left">2024-07-09</td>
+<td align="right">2</td>
+<td align="right">00881</td>
+<td align="left">國泰台灣5G+</td>
+<td align="left">26.82*186&#x3D;4988</td>
+<td align="right">86</td>
+</tr>
+<tr>
+<td align="left">2024-07-08</td>
+<td align="right">3</td>
+<td align="right">1608</td>
+<td align="left">華榮</td>
+<td align="left">38.3*125&#x3D;4787</td>
+<td align="right">110</td>
+</tr>
+<tr>
+<td align="left">2024-07-08</td>
+<td align="right">3</td>
+<td align="right">0056</td>
+<td align="left">元大高股息</td>
+<td align="left">42.06*236&#x3D;9926</td>
+<td align="right">114</td>
+</tr>
+<tr>
+<td align="left">2024-07-05</td>
+<td align="right">4</td>
+<td align="right">2362</td>
+<td align="left">藍天</td>
+<td align="left">54.98*90&#x3D;4948</td>
+<td align="right">115</td>
+</tr>
+<tr>
+<td align="left">2024-07-09</td>
+<td align="right">2</td>
+<td align="right">00923</td>
+<td align="left">群益台ESG低碳50</td>
+<td align="left">23.83*210&#x3D;5004</td>
+<td align="right">119</td>
+</tr>
+<tr>
+<td align="left">2024-07-09</td>
+<td align="right">2</td>
+<td align="right">006208</td>
+<td align="left">富邦台50</td>
+<td align="left">115.05*43&#x3D;4947</td>
+<td align="right">153</td>
+</tr>
+<tr>
+<td align="left">2024-07-08</td>
+<td align="right">3</td>
+<td align="right">00830</td>
+<td align="left">國泰費城半導體</td>
+<td align="left">51.67*96&#x3D;4960</td>
+<td align="right">212</td>
+</tr>
+<tr>
+<td align="left">2024-07-08</td>
+<td align="right">3</td>
+<td align="right">00892</td>
+<td align="left">富邦台灣半導體</td>
+<td align="left">18.12*274&#x3D;4964</td>
+<td align="right">214</td>
+</tr>
+<tr>
+<td align="left">2024-07-08</td>
+<td align="right">3</td>
+<td align="right">2542</td>
+<td align="left">興富發</td>
+<td align="left">56.13*89&#x3D;4995</td>
+<td align="right">322</td>
+</tr>
+<tr>
+<td align="left">2024-07-08</td>
+<td align="right">3</td>
+<td align="right">2881</td>
+<td align="left">富邦金</td>
+<td align="left">84.79*58&#x3D;4917</td>
+<td align="right">418</td>
+</tr>
+</tbody></table>
+<p>庫存明細</p>
+<hr>
+<h3 id="3296-勝德-電子零組件業-3交易日前-7月8日-進場"><a href="#3296-勝德-電子零組件業-3交易日前-7月8日-進場" class="headerlink" title="[3296]勝德&#x2F;電子零組件業 3交易日前 7月8日 進場"></a>[3296]勝德&#x2F;電子零組件業 3交易日前 7月8日 進場</h3><p>成本&#x3D;31.24 數量&#x3D;151 現價&#x3D;28.45<br>損益&#x3D;-440 損益比&#x3D;-9.33% 賣單&#x3D;0<br>DC_h&#x3D;32.85 DC_l&#x3D;24.6 At_DC&#x3D;2.8<br>漲停&#x3D;31.8 跌停&#x3D;26.1 參考價 VWAP&#x3D;28.95 ATR&#x3D;1.73<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/3296@2024-07-11.jpg"
+                      alt="3296 勝德分析圖"
+                ></p>
+<hr>
+<h3 id="2331-精英-電腦及週邊設備業-3交易日前-7月8日-進場"><a href="#2331-精英-電腦及週邊設備業-3交易日前-7月8日-進場" class="headerlink" title="[2331]精英&#x2F;電腦及週邊設備業 3交易日前 7月8日 進場"></a>[2331]精英&#x2F;電腦及週邊設備業 3交易日前 7月8日 進場</h3><p>成本&#x3D;34.64 數量&#x3D;140 現價&#x3D;33.3<br>損益&#x3D;-207 損益比&#x3D;-4.27% 賣單&#x3D;0<br>DC_h&#x3D;35.5 DC_l&#x3D;32.3 At_DC&#x3D;1.9<br>漲停&#x3D;36.55 跌停&#x3D;29.95 參考價 VWAP&#x3D;33.25 ATR&#x3D;1.1<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2331@2024-07-11.jpg"
+                      alt="2331 精英分析圖"
+                ></p>
+<hr>
+<h3 id="2903-遠百-貿易百貨業-4交易日前-7月5日-進場"><a href="#2903-遠百-貿易百貨業-4交易日前-7月5日-進場" class="headerlink" title="[2903]遠百&#x2F;貿易百貨業 4交易日前 7月5日 進場"></a>[2903]遠百&#x2F;貿易百貨業 4交易日前 7月5日 進場</h3><p>成本&#x3D;35.49 數量&#x3D;84 現價&#x3D;33.35<br>損益&#x3D;-191 損益比&#x3D;-6.41% 賣單&#x3D;0<br>DC_h&#x3D;35.6 DC_l&#x3D;31.7 At_DC&#x3D;2.5<br>漲停&#x3D;36.6 跌停&#x3D;30.0 參考價 VWAP&#x3D;33.3 ATR&#x3D;0.85<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2903@2024-07-11.jpg"
+                      alt="2903 遠百分析圖"
+                ></p>
+<hr>
+<h3 id="2328-廣宇-電子零組件業-3交易日前-7月8日-進場"><a href="#2328-廣宇-電子零組件業-3交易日前-7月8日-進場" class="headerlink" title="[2328]廣宇&#x2F;電子零組件業 3交易日前 7月8日 進場"></a>[2328]廣宇&#x2F;電子零組件業 3交易日前 7月8日 進場</h3><p>成本&#x3D;40.8 數量&#x3D;121 現價&#x3D;40.0<br>損益&#x3D;-117 損益比&#x3D;-2.37% 賣單&#x3D;0<br>DC_h&#x3D;41.5 DC_l&#x3D;38.65 At_DC&#x3D;2.8<br>漲停&#x3D;44.45 跌停&#x3D;36.45 參考價 VWAP&#x3D;40.45 ATR&#x3D;1.2<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2328@2024-07-11.jpg"
+                      alt="2328 廣宇分析圖"
+                ></p>
+<hr>
+<h3 id="1101-台泥-水泥工業-2交易日前-7月9日-進場"><a href="#1101-台泥-水泥工業-2交易日前-7月9日-進場" class="headerlink" title="[1101]台泥&#x2F;水泥工業 2交易日前 7月9日 進場"></a>[1101]台泥&#x2F;水泥工業 2交易日前 7月9日 進場</h3><p>成本&#x3D;34.49 數量&#x3D;144 現價&#x3D;34.05<br>損益&#x3D;-84 損益比&#x3D;-1.69% 賣單&#x3D;0<br>DC_h&#x3D;34.75 DC_l&#x3D;33.35 At_DC&#x3D;3.0<br>漲停&#x3D;37.2 跌停&#x3D;30.5 參考價 VWAP&#x3D;33.85 ATR&#x3D;0.48<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/1101@2024-07-11.jpg"
+                      alt="1101 台泥分析圖"
+                ></p>
+<hr>
+<h3 id="2520-冠德-建材營造業-5交易日前-7月4日-進場"><a href="#2520-冠德-建材營造業-5交易日前-7月4日-進場" class="headerlink" title="[2520]冠德&#x2F;建材營造業 5交易日前 7月4日 進場"></a>[2520]冠德&#x2F;建材營造業 5交易日前 7月4日 進場</h3><p>成本&#x3D;58.17 數量&#x3D;86 現價&#x3D;57.7<br>損益&#x3D;-62 損益比&#x3D;-1.24% 賣單&#x3D;0<br>DC_h&#x3D;61.0 DC_l&#x3D;54.1 At_DC&#x3D;3.1<br>漲停&#x3D;63.3 跌停&#x3D;51.9 參考價 VWAP&#x3D;57.6 ATR&#x3D;2.06<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2520@2024-07-11.jpg"
+                      alt="2520 冠德分析圖"
+                ></p>
+<hr>
+<h3 id="2633-台灣高鐵-航運業-2交易日前-7月9日-進場"><a href="#2633-台灣高鐵-航運業-2交易日前-7月9日-進場" class="headerlink" title="[2633]台灣高鐵&#x2F;航運業 2交易日前 7月9日 進場"></a>[2633]台灣高鐵&#x2F;航運業 2交易日前 7月9日 進場</h3><p>成本&#x3D;30.64 數量&#x3D;162 現價&#x3D;30.55<br>損益&#x3D;-36 損益比&#x3D;-0.73% 賣單&#x3D;0<br>DC_h&#x3D;30.85 DC_l&#x3D;29.8 At_DC&#x3D;4.3<br>漲停&#x3D;33.55 跌停&#x3D;27.45 參考價 VWAP&#x3D;30.5 ATR&#x3D;0.27<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2633@2024-07-11.jpg"
+                      alt="2633 台灣高鐵分析圖"
+                ></p>
+<hr>
+<h3 id="2354-鴻準-其他電子業-3交易日前-7月8日-進場"><a href="#2354-鴻準-其他電子業-3交易日前-7月8日-進場" class="headerlink" title="[2354]鴻準&#x2F;其他電子業 3交易日前 7月8日 進場"></a>[2354]鴻準&#x2F;其他電子業 3交易日前 7月8日 進場</h3><p>成本&#x3D;72.5 數量&#x3D;68 現價&#x3D;73.0<br>損益&#x3D;13 損益比&#x3D;0.26% 賣單&#x3D;0<br>DC_h&#x3D;74.8 DC_l&#x3D;67.5 At_DC&#x3D;4.5<br>漲停&#x3D;80.4 跌停&#x3D;65.8 參考價 VWAP&#x3D;73.1 ATR&#x3D;2.48<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2354@2024-07-11.jpg"
+                      alt="2354 鴻準分析圖"
+                ></p>
+<hr>
+<h3 id="00878-國泰永續高股息-未分類-00-3交易日前-7月8日-進場"><a href="#00878-國泰永續高股息-未分類-00-3交易日前-7月8日-進場" class="headerlink" title="[00878]國泰永續高股息&#x2F;未分類(00) 3交易日前 7月8日 進場"></a>[00878]國泰永續高股息&#x2F;未分類(00) 3交易日前 7月8日 進場</h3><p>成本&#x3D;24.2 數量&#x3D;205 現價&#x3D;24.58<br>損益&#x3D;65 損益比&#x3D;1.31% 賣單&#x3D;0<br>DC_h&#x3D;24.66 DC_l&#x3D;23.25 At_DC&#x3D;5.7<br>漲停&#x3D;26.79 跌停&#x3D;21.93 參考價 VWAP&#x3D;24.36 ATR&#x3D;0.22<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/00878@2024-07-11.jpg"
+                      alt="00878 國泰永續高股息分析圖"
+                ></p>
+<hr>
+<h3 id="1402-遠東新-紡織纖維-5交易日前-7月4日-進場"><a href="#1402-遠東新-紡織纖維-5交易日前-7月4日-進場" class="headerlink" title="[1402]遠東新&#x2F;紡織纖維 5交易日前 7月4日 進場"></a>[1402]遠東新&#x2F;紡織纖維 5交易日前 7月4日 進場</h3><p>成本&#x3D;36.99 數量&#x3D;81 現價&#x3D;38.0<br>損益&#x3D;69 損益比&#x3D;2.3% 賣單&#x3D;0<br>DC_h&#x3D;38.2 DC_l&#x3D;34.4 At_DC&#x3D;5.7<br>漲停&#x3D;40.6 跌停&#x3D;33.3 參考價 VWAP&#x3D;36.95 ATR&#x3D;0.87<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/1402@2024-07-11.jpg"
+                      alt="1402 遠東新分析圖"
+                ></p>
+<hr>
+<h3 id="00881-國泰台灣5G-未分類-00-2交易日前-7月9日-進場"><a href="#00881-國泰台灣5G-未分類-00-2交易日前-7月9日-進場" class="headerlink" title="[00881]國泰台灣5G+&#x2F;未分類(00) 2交易日前 7月9日 進場"></a>[00881]國泰台灣5G+&#x2F;未分類(00) 2交易日前 7月9日 進場</h3><p>成本&#x3D;26.82 數量&#x3D;186 現價&#x3D;27.35<br>損益&#x3D;86 損益比&#x3D;1.72% 賣單&#x3D;0<br>DC_h&#x3D;27.5 DC_l&#x3D;24.1 At_DC&#x3D;5.7<br>漲停&#x3D;29.73 跌停&#x3D;24.33 參考價 VWAP&#x3D;27.03 ATR&#x3D;0.45<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/00881@2024-07-11.jpg"
+                      alt="00881 國泰台灣5G+分析圖"
+                ></p>
+<hr>
+<h3 id="1608-華榮-電器電纜-3交易日前-7月8日-進場"><a href="#1608-華榮-電器電纜-3交易日前-7月8日-進場" class="headerlink" title="[1608]華榮&#x2F;電器電纜 3交易日前 7月8日 進場"></a>[1608]華榮&#x2F;電器電纜 3交易日前 7月8日 進場</h3><p>成本&#x3D;38.3 數量&#x3D;125 現價&#x3D;39.35<br>損益&#x3D;110 損益比&#x3D;2.3% 賣單&#x3D;0<br>DC_h&#x3D;41.85 DC_l&#x3D;37.3 At_DC&#x3D;2.7<br>漲停&#x3D;43.15 跌停&#x3D;35.35 參考價 VWAP&#x3D;39.25 ATR&#x3D;1.44<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/1608@2024-07-11.jpg"
+                      alt="1608 華榮分析圖"
+                ></p>
+<hr>
+<h3 id="0056-元大高股息-未分類-00-3交易日前-7月8日-進場"><a href="#0056-元大高股息-未分類-00-3交易日前-7月8日-進場" class="headerlink" title="[0056]元大高股息&#x2F;未分類(00) 3交易日前 7月8日 進場"></a>[0056]元大高股息&#x2F;未分類(00) 3交易日前 7月8日 進場</h3><p>成本&#x3D;42.06 數量&#x3D;236 現價&#x3D;42.65<br>損益&#x3D;114 損益比&#x3D;1.15% 賣單&#x3D;0<br>DC_h&#x3D;42.77 DC_l&#x3D;40.41 At_DC&#x3D;5.7<br>漲停&#x3D;46.57 跌停&#x3D;38.11 參考價 VWAP&#x3D;42.34 ATR&#x3D;0.39<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/0056@2024-07-11.jpg"
+                      alt="0056 元大高股息分析圖"
+                ></p>
+<hr>
+<h3 id="2362-藍天-電腦及週邊設備業-4交易日前-7月5日-進場"><a href="#2362-藍天-電腦及週邊設備業-4交易日前-7月5日-進場" class="headerlink" title="[2362]藍天&#x2F;電腦及週邊設備業 4交易日前 7月5日 進場"></a>[2362]藍天&#x2F;電腦及週邊設備業 4交易日前 7月5日 進場</h3><p>成本&#x3D;54.98 數量&#x3D;90 現價&#x3D;56.5<br>損益&#x3D;115 損益比&#x3D;2.32% 賣單&#x3D;0<br>DC_h&#x3D;61.4 DC_l&#x3D;51.5 At_DC&#x3D;3.0<br>漲停&#x3D;62.9 跌停&#x3D;51.5 參考價 VWAP&#x3D;57.2 ATR&#x3D;2.41<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2362@2024-07-11.jpg"
+                      alt="2362 藍天分析圖"
+                ></p>
+<hr>
+<h3 id="00923-群益台ESG低碳50-未分類-00-2交易日前-7月9日-進場"><a href="#00923-群益台ESG低碳50-未分類-00-2交易日前-7月9日-進場" class="headerlink" title="[00923]群益台ESG低碳50&#x2F;未分類(00) 2交易日前 7月9日 進場"></a>[00923]群益台ESG低碳50&#x2F;未分類(00) 2交易日前 7月9日 進場</h3><p>成本&#x3D;23.83 數量&#x3D;210 現價&#x3D;24.46<br>損益&#x3D;119 損益比&#x3D;2.38% 賣單&#x3D;0<br>DC_h&#x3D;24.5 DC_l&#x3D;22.01 At_DC&#x3D;5.9<br>漲停&#x3D;26.51 跌停&#x3D;21.69 參考價 VWAP&#x3D;24.1 ATR&#x3D;0.33<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/00923@2024-07-11.jpg"
+                      alt="00923 群益台ESG低碳50分析圖"
+                ></p>
+<hr>
+<h3 id="006208-富邦台50-未分類-00-2交易日前-7月9日-進場"><a href="#006208-富邦台50-未分類-00-2交易日前-7月9日-進場" class="headerlink" title="[006208]富邦台50&#x2F;未分類(00) 2交易日前 7月9日 進場"></a>[006208]富邦台50&#x2F;未分類(00) 2交易日前 7月9日 進場</h3><p>成本&#x3D;115.05 數量&#x3D;43 現價&#x3D;118.9<br>損益&#x3D;153 損益比&#x3D;3.09% 賣單&#x3D;0<br>DC_h&#x3D;119.35 DC_l&#x3D;103.9 At_DC&#x3D;5.8<br>漲停&#x3D;127.85 跌停&#x3D;104.65 參考價 VWAP&#x3D;116.25 ATR&#x3D;1.9<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/006208@2024-07-11.jpg"
+                      alt="006208 富邦台50分析圖"
+                ></p>
+<hr>
+<h3 id="00830-國泰費城半導體-未分類-00-3交易日前-7月8日-進場"><a href="#00830-國泰費城半導體-未分類-00-3交易日前-7月8日-進場" class="headerlink" title="[00830]國泰費城半導體&#x2F;未分類(00) 3交易日前 7月8日 進場"></a>[00830]國泰費城半導體&#x2F;未分類(00) 3交易日前 7月8日 進場</h3><p>成本&#x3D;51.67 數量&#x3D;96 現價&#x3D;54.0<br>損益&#x3D;212 損益比&#x3D;4.27% 賣單&#x3D;0<br>DC_h&#x3D;54.1 DC_l&#x3D;48.78 At_DC&#x3D;5.9<br>漲停&#x3D;9999.95 跌停&#x3D;0.01 參考價 VWAP&#x3D;52.95 ATR&#x3D;0.78<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/00830@2024-07-11.jpg"
+                      alt="00830 國泰費城半導體分析圖"
+                ></p>
+<hr>
+<h3 id="00892-富邦台灣半導體-未分類-00-3交易日前-7月8日-進場"><a href="#00892-富邦台灣半導體-未分類-00-3交易日前-7月8日-進場" class="headerlink" title="[00892]富邦台灣半導體&#x2F;未分類(00) 3交易日前 7月8日 進場"></a>[00892]富邦台灣半導體&#x2F;未分類(00) 3交易日前 7月8日 進場</h3><p>成本&#x3D;18.12 數量&#x3D;274 現價&#x3D;18.95<br>損益&#x3D;214 損益比&#x3D;4.31% 賣單&#x3D;0<br>DC_h&#x3D;18.96 DC_l&#x3D;17.06 At_DC&#x3D;6.0<br>漲停&#x3D;20.46 跌停&#x3D;16.74 參考價 VWAP&#x3D;18.6 ATR&#x3D;0.29<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/00892@2024-07-11.jpg"
+                      alt="00892 富邦台灣半導體分析圖"
+                ></p>
+<hr>
+<h3 id="2542-興富發-建材營造業-3交易日前-7月8日-進場"><a href="#2542-興富發-建材營造業-3交易日前-7月8日-進場" class="headerlink" title="[2542]興富發&#x2F;建材營造業 3交易日前 7月8日 進場"></a>[2542]興富發&#x2F;建材營造業 3交易日前 7月8日 進場</h3><p>成本&#x3D;56.13 數量&#x3D;89 現價&#x3D;60.0<br>損益&#x3D;322 損益比&#x3D;6.45% 賣單&#x3D;0<br>DC_h&#x3D;61.6 DC_l&#x3D;49.1 At_DC&#x3D;5.2<br>漲停&#x3D;65.3 跌停&#x3D;53.5 參考價 VWAP&#x3D;59.4 ATR&#x3D;1.98<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2542@2024-07-11.jpg"
+                      alt="2542 興富發分析圖"
+                ></p>
+<hr>
+<h3 id="2881-富邦金-金融保險業-3交易日前-7月8日-進場"><a href="#2881-富邦金-金融保險業-3交易日前-7月8日-進場" class="headerlink" title="[2881]富邦金&#x2F;金融保險業 3交易日前 7月8日 進場"></a>[2881]富邦金&#x2F;金融保險業 3交易日前 7月8日 進場</h3><p>成本&#x3D;84.79 數量&#x3D;58 現價&#x3D;92.4<br>損益&#x3D;418 損益比&#x3D;8.5% 賣單&#x3D;0<br>DC_h&#x3D;93.6 DC_l&#x3D;75.8 At_DC&#x3D;5.6<br>漲停&#x3D;98.0 跌停&#x3D;80.2 參考價 VWAP&#x3D;89.1 ATR&#x3D;1.79<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2881@2024-07-11.jpg"
+                      alt="2881 富邦金分析圖"
+                ></p>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E5%8F%B0%E8%82%A1/">#台股</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E9%9B%B6%E8%82%A1/">#零股</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93/">#量化交易</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024-07-11@Search/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">2024-07-11 搜尋分析</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">此頁目錄</div>
+        <div class="page-title">2024-07-11 庫存明細</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2024-07-11-%E5%BA%AB%E5%AD%98%E6%98%8E%E7%B4%B0"><span class="nav-text">2024-07-11 庫存明細</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3296-%E5%8B%9D%E5%BE%B7-%E9%9B%BB%E5%AD%90%E9%9B%B6%E7%B5%84%E4%BB%B6%E6%A5%AD-3%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%888%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[3296]勝德&#x2F;電子零組件業 3交易日前 7月8日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2331-%E7%B2%BE%E8%8B%B1-%E9%9B%BB%E8%85%A6%E5%8F%8A%E9%80%B1%E9%82%8A%E8%A8%AD%E5%82%99%E6%A5%AD-3%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%888%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[2331]精英&#x2F;電腦及週邊設備業 3交易日前 7月8日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2903-%E9%81%A0%E7%99%BE-%E8%B2%BF%E6%98%93%E7%99%BE%E8%B2%A8%E6%A5%AD-4%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%885%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[2903]遠百&#x2F;貿易百貨業 4交易日前 7月5日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2328-%E5%BB%A3%E5%AE%87-%E9%9B%BB%E5%AD%90%E9%9B%B6%E7%B5%84%E4%BB%B6%E6%A5%AD-3%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%888%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[2328]廣宇&#x2F;電子零組件業 3交易日前 7月8日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1101-%E5%8F%B0%E6%B3%A5-%E6%B0%B4%E6%B3%A5%E5%B7%A5%E6%A5%AD-2%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%889%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[1101]台泥&#x2F;水泥工業 2交易日前 7月9日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2520-%E5%86%A0%E5%BE%B7-%E5%BB%BA%E6%9D%90%E7%87%9F%E9%80%A0%E6%A5%AD-5%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%884%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[2520]冠德&#x2F;建材營造業 5交易日前 7月4日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2633-%E5%8F%B0%E7%81%A3%E9%AB%98%E9%90%B5-%E8%88%AA%E9%81%8B%E6%A5%AD-2%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%889%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[2633]台灣高鐵&#x2F;航運業 2交易日前 7月9日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2354-%E9%B4%BB%E6%BA%96-%E5%85%B6%E4%BB%96%E9%9B%BB%E5%AD%90%E6%A5%AD-3%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%888%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[2354]鴻準&#x2F;其他電子業 3交易日前 7月8日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#00878-%E5%9C%8B%E6%B3%B0%E6%B0%B8%E7%BA%8C%E9%AB%98%E8%82%A1%E6%81%AF-%E6%9C%AA%E5%88%86%E9%A1%9E-00-3%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%888%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[00878]國泰永續高股息&#x2F;未分類(00) 3交易日前 7月8日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1402-%E9%81%A0%E6%9D%B1%E6%96%B0-%E7%B4%A1%E7%B9%94%E7%BA%96%E7%B6%AD-5%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%884%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[1402]遠東新&#x2F;紡織纖維 5交易日前 7月4日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#00881-%E5%9C%8B%E6%B3%B0%E5%8F%B0%E7%81%A35G-%E6%9C%AA%E5%88%86%E9%A1%9E-00-2%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%889%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[00881]國泰台灣5G+&#x2F;未分類(00) 2交易日前 7月9日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1608-%E8%8F%AF%E6%A6%AE-%E9%9B%BB%E5%99%A8%E9%9B%BB%E7%BA%9C-3%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%888%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[1608]華榮&#x2F;電器電纜 3交易日前 7月8日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0056-%E5%85%83%E5%A4%A7%E9%AB%98%E8%82%A1%E6%81%AF-%E6%9C%AA%E5%88%86%E9%A1%9E-00-3%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%888%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[0056]元大高股息&#x2F;未分類(00) 3交易日前 7月8日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2362-%E8%97%8D%E5%A4%A9-%E9%9B%BB%E8%85%A6%E5%8F%8A%E9%80%B1%E9%82%8A%E8%A8%AD%E5%82%99%E6%A5%AD-4%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%885%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[2362]藍天&#x2F;電腦及週邊設備業 4交易日前 7月5日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#00923-%E7%BE%A4%E7%9B%8A%E5%8F%B0ESG%E4%BD%8E%E7%A2%B350-%E6%9C%AA%E5%88%86%E9%A1%9E-00-2%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%889%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[00923]群益台ESG低碳50&#x2F;未分類(00) 2交易日前 7月9日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#006208-%E5%AF%8C%E9%82%A6%E5%8F%B050-%E6%9C%AA%E5%88%86%E9%A1%9E-00-2%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%889%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[006208]富邦台50&#x2F;未分類(00) 2交易日前 7月9日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#00830-%E5%9C%8B%E6%B3%B0%E8%B2%BB%E5%9F%8E%E5%8D%8A%E5%B0%8E%E9%AB%94-%E6%9C%AA%E5%88%86%E9%A1%9E-00-3%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%888%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[00830]國泰費城半導體&#x2F;未分類(00) 3交易日前 7月8日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#00892-%E5%AF%8C%E9%82%A6%E5%8F%B0%E7%81%A3%E5%8D%8A%E5%B0%8E%E9%AB%94-%E6%9C%AA%E5%88%86%E9%A1%9E-00-3%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%888%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[00892]富邦台灣半導體&#x2F;未分類(00) 3交易日前 7月8日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2542-%E8%88%88%E5%AF%8C%E7%99%BC-%E5%BB%BA%E6%9D%90%E7%87%9F%E9%80%A0%E6%A5%AD-3%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%888%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[2542]興富發&#x2F;建材營造業 3交易日前 7月8日 進場</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2881-%E5%AF%8C%E9%82%A6%E9%87%91-%E9%87%91%E8%9E%8D%E4%BF%9D%E9%9A%AA%E6%A5%AD-3%E4%BA%A4%E6%98%93%E6%97%A5%E5%89%8D-7%E6%9C%888%E6%97%A5-%E9%80%B2%E5%A0%B4"><span class="nav-text">[2881]富邦金&#x2F;金融保險業 3交易日前 7月8日 進場</span></a></li></ol></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-regular fa-pen-fancy" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">易</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        共 57 篇文章
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+        
+        
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜尋..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+
+
+
+<script src="/js/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js" type="module"></script>
+
+
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+</body>
+</html>
